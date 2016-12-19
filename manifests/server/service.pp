@@ -5,7 +5,7 @@ class percona::server::service {
       ensure  => $percona::ensure,
       enable  => true,
       name    => $percona::server::packages::mysql_bin,
-      require => Package[$percona::server::packages::packs],
+      require => Package[$percona::server::packages::pack_client],
   }
-
+      info("We need $percona::server::packages::pack_client")
 }
