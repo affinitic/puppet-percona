@@ -1,7 +1,7 @@
 class percona::server::service {
 
   service {
-    'mysql':
+    'mysqld':
       ensure  => $percona::ensure,
       enable  => true,
       name    => $percona::server::packages::mysql_bin,
